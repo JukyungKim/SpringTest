@@ -30,6 +30,7 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
+	@LogExecutionTime
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
@@ -67,6 +68,7 @@ public class HomeController {
 	}
 	// 1. HttpServletRequest를 이용하여 form의 데이터 가져오기
 	@RequestMapping("/joinRequestServlet")
+	@LogExecutionTime
 	public String join(HttpServletRequest request, Model model) {
 		model.addAttribute("name", request.getParameter("name"));
 		model.addAttribute("gender", request.getParameter("gender"));
@@ -79,6 +81,7 @@ public class HomeController {
 	}
 	// 2. @RequestParam을 이용하여 form의 데이터 가져오기
 	@RequestMapping("/joinRequestParam")
+	@LogExecutionTime
 	public String join(Model model, String name, @RequestParam("gender") String g, String email) {
 		model.addAttribute("name", name);
 		model.addAttribute("gender", g);
