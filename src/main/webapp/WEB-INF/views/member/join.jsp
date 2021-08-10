@@ -35,7 +35,7 @@
 		if(f.name.value == '' || f.gender.value == '' || f.email.value){
 			console.log("Not input");
 		}
-		f.action = 'joinPathVariable/' + f.name.value + '/' + f.gender.value + '/' + f.email.value;
+		f.action = 'joinPathVariable/' + f.name.value + '/' + f.gender.value + '/' + f.email.value + '/';
 		console.log("input");
 	}
 	</script>

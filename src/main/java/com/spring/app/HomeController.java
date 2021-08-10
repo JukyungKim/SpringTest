@@ -114,6 +114,23 @@ public class HomeController {
 		
 		return "/member/info";
 	}
+	
+	// 20210809
+	@RequestMapping("/login")
+	public String login() {
+		return "/member/login";
+	}
+	
+	@RequestMapping("/loing_result")
+	public String login_result(String id, String pwd) {
+		if(id.equals("kim") && pwd.equals("1234")) {
+			return "/redirect:/";
+		}
+		else {
+			return "/redirect:login";
+		}
+	}
+	
 }
 
 
