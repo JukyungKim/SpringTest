@@ -4,12 +4,13 @@
 <html>
 <head>
 	<title>Home</title>
-	<script src="${path}/resources/js/my_js.js"></script>
-	<link href="${path}/resources/css/my_css.css" rel="stylesheet"/>
+	<script src="<%=request.getContextPath() %>/resources/js/my_js.js"></script>
+	<link href="<%=request.getContextPath() %>/resources/css/my_css.css" rel="stylesheet"/>
+	<%-- <link href="${path}/resources/css/my_css.css" rel="stylesheet"/> --%>
 </head>
 <body>
 <h1>
-	Hello world!  
+	Hello world!!!  
 </h1>
 <P>  The time on the server is ${serverTime}. </P>
 </body>
