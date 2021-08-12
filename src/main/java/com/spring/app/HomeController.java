@@ -121,13 +121,13 @@ public class HomeController {
 		return "/member/login";
 	}
 	
-	@RequestMapping("/loing_result")
+	@RequestMapping("/login_result")
 	public String login_result(String id, String pwd) {
 		if(id.equals("kim") && pwd.equals("1234")) {
-			return "/redirect:/";
+			return "redirect:/";
 		}
 		else {
-			return "/redirect:login";
+			return "redirect:login";
 		}
 	}
 	
